@@ -1,0 +1,12 @@
+body{
+  animation-name: hello;
+  animation-duration: 3s;
+}
+@keyframes hello {
+  50%{
+    background-color: #000;
+  }
+  100%{
+    background-color: #fff;
+  }
+}
