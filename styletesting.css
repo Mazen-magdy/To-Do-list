@@ -6,6 +6,9 @@ body{
   50%{
     background-color: #000;
   }
+  75%{
+    background-color: #f00;
+  }
   100%{
     background-color: #fff;
   }

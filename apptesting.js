@@ -1,1 +1,1 @@
-alert('WOW!')
+alert('WOW! it is red')
