@@ -170,8 +170,4 @@ for(item in obj){
 }
 returning()
 ///////////
-/*
-  your mission
-  make the check key update every check;
-  arrange the items;
-*/
+
