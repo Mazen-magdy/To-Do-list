@@ -4,7 +4,6 @@ let form = document.getElementById('form');
 let text = document.getElementById('text');
 let submit = document.getElementById('submit');
 let container = document.getElementById('container');
-let theNumberOfDivs = container.childElementCount;
 let innerInput = container.getElementsByTagName('input');
 let initial = -1;
 let completed;
@@ -13,12 +12,18 @@ let cap = function(string){
   let result = string.replace(string.charAt(0), string.charAt(0).toUpperCase())
   return result;
 }
+if(localStorage.getItem('number') === null){
+  localStorage.setItem('number',0);
+}
+let n = localStorage.getItem('number');
+theNumberOfDivs = parseInt(n);
+console.log(theNumberOfDivs)
 let arrtasks = [];
 // work starts here
 submit.addEventListener('click', () => {
   if(text.value !==""){
   event.preventDefault();
-  theNumberOfDivs = container.childElementCount;
+
   //creation of div
    let div = document.createElement('div');
  //creation of second div
@@ -89,6 +94,8 @@ submit.addEventListener('click', () => {
  }else {
     alert("you have to fill the text input")
   }
+  theNumberOfDivs++;
+  localStorage.setItem('number',theNumberOfDivs);
 })
 function storing(testarr){
   let thestore = JSON.stringify(testarr);
@@ -170,4 +177,8 @@ for(item in obj){
 }
 returning()
 ///////////
-
+/*
+  your mission
+  make the check key update every check;
+  arrange the items;
+*/
